@@ -10,8 +10,6 @@ app.use(express.static('public'));
 const data = require("./countries.json");
 const data2 = require("./country-coords.json");
 
-const data3 = require("./data.json");
-console.log(data3.currency)
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
 
@@ -20,9 +18,7 @@ app.set("view engine", "ejs");
 
 // Routes
 app.get("/", (req, res) => {
-  res.render("home",{
-    item:data,
-  });
+  res.render("home"
 });
 
 // search form
@@ -59,12 +55,6 @@ app.post('/search', (req, res) => {
       error: 'Tere baap ne hi banayi yeh country??'
     });
   }
-
-  // if it exists render this
-  // res.render('country', {
-  //   country: check1,
-  //   coords: check2,
-  // });
 });
 
 //api
@@ -92,26 +82,3 @@ app.listen(port, () => {
 //code stops here
 
 
-// comments
-
-
-// app.get("/country/:id", (req, res) => {
-//   const id = req.params.id.toLowerCase();
-//   const check = data.find(c => c.country.toLowerCase() === id);
-//   // to check if the couuntry exists in the database 
-//   if (!check) {
-//     return res.render(
-//       "error", //.ejs file
-//       {
-//         error: "country not found",
-//       },
-//     );
-//   }
-//   // if it exists render this
-//   res.render(
-//     "country", //.ejs file
-//     {
-//       country: data.find(c => c.country.toLowerCase() === id),
-//     },
-//   );
-// });
