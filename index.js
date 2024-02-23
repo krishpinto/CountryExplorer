@@ -52,7 +52,7 @@ app.post('/search', (req, res) => {
     });
   } else {
     return res.render('error', {
-      error: 'Tere baap ne hi banayi yeh country??'
+      error: 'Tere baap ne hi banayi yeh country?? bol na'
     });
   }
 });
