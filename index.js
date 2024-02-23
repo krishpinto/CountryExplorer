@@ -18,7 +18,7 @@ app.set("view engine", "ejs");
 
 // Routes
 app.get("/", (req, res) => {
-  res.render("home"
+  res.render("home");
 });
 
 // search form
@@ -61,7 +61,7 @@ app.post('/search', (req, res) => {
 app.get("/api/country", (req, res) => {
   
   const countryName = req.query.name;
-  if (!countryName) return res.json({ error: "Provide me with a valid country or ur gay" })
+  if (!countryName) return res.json({ error: "Provide me with a valid country or ur gay ok" })
   
   const check1 = data.find(c => c.country.toLowerCase() === countryName.toLowerCase());
   const check2 = data2.find(c => c.country.toLowerCase() === countryName.toLowerCase());
