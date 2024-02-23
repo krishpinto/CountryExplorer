@@ -10,6 +10,8 @@ app.use(express.static('public'));
 const data = require("./countries.json");
 const data2 = require("./country-coords.json");
 
+// Middleware
+app.use(express.static('public'));
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
 
