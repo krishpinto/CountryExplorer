@@ -85,9 +85,9 @@ app.get("/api/country", (req, res) => {
   }
 });
 
-app.listen(
-  console.log(`app is running`)
-);
+app.listen(port, () => {
+  console.log(`Example app listening on port ${port}`)
+})
 
 //code stops here
 
