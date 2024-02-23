@@ -1,0 +1,36 @@
+<html>
+<head>
+  <title><%= country.country %></title>
+  <link rel="stylesheet" href="style.css">
+</head>
+  <body>
+    <h1><%= country.country %></h1>
+    <img src="<%= country.flag %>">
+    <ul>
+      <li>Capital: <%= country.capital %></li>
+      <li>Currency: <%= country.currency %></li>
+      <li>Native Language: <%= country.native_language.join(', ') %></li>
+      <li>Famous For: <%= country.famous_for %></li>
+      <li>Phone Code: <%= country.phone_code %></li>
+      <li>Drive Direction: <%= country.drive_direction %></li>
+      <li>Alcohol Prohibition: <%= country.alcohol_prohibition %></li>
+      <li>Area (km²): <%= country.area.km2 %></li>
+      <li>Area (mi²): <%= country.area.mi2 %></li>
+      <li>Continent: <%= continents[country.continent] %></li>
+      <li>ISO Numeric: <%= country.iso.numeric %></li>
+      <li>ISO Alpha-2: <%= country.iso.alpha_2 %></li>
+      <li>ISO Alpha-3: <%= country.iso.alpha_3 %></li>
+      <li>TLD: <%= country.tld %></li>
+      <li>Constitutional Form: <%= country.constitutional_form %></li>
+      <li>Language Codes: <%= country.language_codes.join(', ') %></li>
+      <li>Is Landlocked: <%= country.is_landlocked %></li>
+      <li>Neighbors: 
+        <ul>
+          <% country.neighbors.forEach(function(neighbor) { %>
+            <li><%= neighbor %></li>
+          <% }); %>
+        </ul>
+      </li>
+    </ul>
+  </body>
+</html>

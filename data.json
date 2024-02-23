@@ -1,0 +1,39 @@
+{
+    "country": "Afghanistan",
+    "capital": "Kabul",
+    "currency": "Afghani",
+    "native_language": [
+        "dari persian",
+        "pashto"
+    ],
+    "famous_for": "Rugs, Taliban",
+    "phone_code": "+93",
+    "flag": "https://cdn.britannica.com/40/5340-004-B25ED5CF/Flag-Afghanistan.jpg",
+    "drive_direction": "right",
+    "alcohol_prohibition": "nationwide",
+    "area": {
+        "km2": 652864,
+        "mi2": 252072
+    },
+    "continent": "as",
+    "iso": {
+        "numeric": "004",
+        "alpha_2": "af",
+        "alpha_3": "afg"
+    },
+    "tld": ".af",
+    "constitutional_form": "republic",
+    "language_codes": [
+        "fa-AF",
+        "ps-AF"
+    ],
+    "is_landlocked": true,
+    "neighbors": [
+        "cn",
+        "ir",
+        "pk",
+        "tj",
+        "tm",
+        "uz"
+    ]
+}
