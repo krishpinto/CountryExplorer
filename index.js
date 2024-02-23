@@ -6,13 +6,13 @@ const bodyParser = require("body-parser");
 const path = require("path");
 
 // make public folder a static folder to use in any ejs file
-app.use(express.static('public'));
+app.use(express.static(path.join(__dirname, "public")));
 
 const data = require("./countries.json");
 const data2 = require("./country-coords.json");
 
 // Middleware
-app.use(express.static('public'));
+
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
 
