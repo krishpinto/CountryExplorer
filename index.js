@@ -3,6 +3,7 @@ const ejs = require("ejs");
 const app = express();
 const port = 3000;
 const bodyParser = require("body-parser");
+const path = require("path");
 
 // make public folder a static folder to use in any ejs file
 app.use(express.static('public'));
@@ -17,6 +18,8 @@ app.use(bodyParser.urlencoded({ extended: false }));
 
 app.engine("html", ejs.renderFile); //npm i ejs
 app.set("view engine", "ejs");
+app.set("views", path.join(__dirname, "views"));
+
 
 // Routes
 app.get("/", (req, res) => {
